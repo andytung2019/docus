@@ -1,0 +1,4 @@
+https://cloud.google.com/blog/big-data/2018/04/now-live-in-tokyo-using-tensorflow-to-predict-taxi-demand
+
+https://cloud.google.com/blog/big-data/2016/08/how-a-japanese-cucumber-farmer-is-using-deep-learning-and-tensorflow#closeImage
+
