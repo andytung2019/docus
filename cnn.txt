@@ -1,0 +1,5 @@
+
+
+https://patrickwasp.com/train-a-mask-r-cnn-model-on-your-own-dataset/
+
+https://patrickwasp.com/create-your-own-coco-style-dataset/
