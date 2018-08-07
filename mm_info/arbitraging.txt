@@ -4,4 +4,5 @@ arbitrage
   在freelancer upworks上搜索，发现主要是亚马逊找产品
   这个可以用爬虫去做
 
-
+2.书:
+Arbitrage: The authoritative guide on how it works
