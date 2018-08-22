@@ -1,0 +1,9 @@
+https://www.quora.com/How-do-I-learn-deep-learning-in-2-months
+
+step 1: andrew.ng
+        hinton
+
+step 2: standford image process :
+
+step 3: build project
+
