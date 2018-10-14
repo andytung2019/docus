@@ -10,6 +10,12 @@ https://www.linkedin.com/pulse/what-some-freelance-websites-like-upwork-japan-se
 日本工作最重要的：
 日语、英语！！！！
 
+日本deep learning 认证（E认证是工程师):
+http://www.jdla.org/business/certificate/#
+参考书:
+1. ＡＩ白書　２０１７ (編)独立行政法人情報処理推進機構　AI白書編集委員会 角川アスキー総合研究所
+2. 人工知能は人間を超えるか ディープラーニングの先にあるもの 角川EPUB選書 (著)松尾 豊 KADOKAWA
+3. 深層学習 機械学習プロフェッショナルシリーズ (著)岡谷 貴之 講談社
 
 日本外包和 free lancer网站：
  日本最大級のクラウドソーシング「クラウドワークスhttp://crowdworks.jp/
