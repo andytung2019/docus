@@ -1,4 +1,5 @@
 日本找工作网站：
+
 https://jobs.gaijinpot.com/
 https://www.daijob.com/
 https://stackoverflow.com/jobs?l=Japan&sort=i
@@ -6,10 +7,12 @@ https://jobs.github.com/
 
 https://www.linkedin.com/pulse/what-some-freelance-websites-like-upwork-japan-serving-jason-ball
 
+https://jp.stanby.com/  这个是找工作最好的网站
 
 日本工作最重要的：
 日语、英语！！！！
 
+技术门户网站：https://codezine.jp/
 日本deep learning 认证（E认证是工程师):
 http://www.jdla.org/business/certificate/#
 参考书:
