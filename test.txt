@@ -1,2 +1,7 @@
 https://stackoverflow.com/questions/52455488/django-rules-object-permissions
 https://blog.csdn.net/zcyuefan/article/details/77743380
+
+https://www.jerrycoding.com/article/site_building_12/
+https://juejin.im/post/5cdfecd0f265da1b667baa36
+http://yshblog.com/blog/174
+https://www.jianshu.com/p/f4d7827821f1
