@@ -5,3 +5,4 @@ https://www.jerrycoding.com/article/site_building_12/
 https://juejin.im/post/5cdfecd0f265da1b667baa36
 http://yshblog.com/blog/174
 https://www.jianshu.com/p/f4d7827821f1
+https://github.com/pinax/pinax-notifications
