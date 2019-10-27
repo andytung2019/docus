@@ -1,0 +1,297 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Navigation | ThemeKit - Admin Template</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+     <!--   <link rel="stylesheet" href="static/font-awesome-4.7.0/css/font-awesome.min.css"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800" rel="stylesheet">
+        
+      
+        <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+ 
+	<!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
+	<script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+ 
+	<!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+    <script src="https://cdn.bootcss.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+        
+    <!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/css/uikit.min.css" />
+
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit-icons.min.js"></script>
+	<script >
+    	// 请求服务器，返回JSON
+    	$(document).ready(function(){
+              $("#demo").click(function(){
+            		var name =  $("#name").val(); // 获取输入框的值
+            		var data = {"name": name};  // 打包成get请求发送的数据
+
+            	$.get(
+                // 请求的url
+                '{% url 'ajax_get' %}',  
+                // 发送的数据
+                data,  
+                // 回调函数，其中ret是返回的JSON，可以以字典的方式调用 
+                function(ret){
+                    var name = ret['name'];
+                    var age = ret['age'];
+                    // 把查询结果输出到网页上
+                    $("#result").text(age);
+                })
+        })
+    })
+   </script>
+    <script> 
+        $(function () { 
+          $('#myTab a:last').tab('show');//初始化显示哪个tab 
+        
+          $('#myTab a').click(function (e) { 
+            e.preventDefault();//阻止a链接的跳转行为 
+            $(this).tab('show');//显示当前选中的链接及关联的content 
+          }) 
+        }) 
+      </script>
+  <script>
+    function add_info()
+    {
+        var form = document.getElementById('updateform');
+        form.submit();
+        $("#myModal").on("hidden.bs.modal", function() {
+            $(this).removeData("bs.modal");
+        });
+ 
+    }
+</script>
+</head>
+<body>  
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active"  data-toggle="tab" href="#profile-tab" role="tab" aria-controls="home"
+                aria-selected="true">
+                <h5>Profile</h5>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link"  data-toggle="tab" href="#notification-tab" role="tab" aria-controls="profile"
+                aria-selected="false">
+                <h5>Notification</h5>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link"  data-toggle="tab" href="#group-tab" role="tab" aria-controls="contact"
+                aria-selected="false">
+                <h5>Groups</h5>
+            </a>
+        </li>
+        
+    </ul>
+    
+  
+    <div id="myTabContent" class="tab-content">
+    
+        <!--  table panel notification start -->
+        <div class="tab-pane fade in active" id="profile-tab">
+            <p> profile</p>
+         </div>
+        <!-- table panel  end -->
+
+        <!--  table panel notification start -->
+         <div class="tab-pane fade" id="notification-tab">
+            <div class="col-md-12">
+             <div class="card table-card">
+                <div class="card-header">
+                     <h6>   </h6> 
+                </div>
+                 <div class="card-block">
+                 <div class="table-responsive">
+                     <table class="table table-hover mb-0">
+                       <thead>
+                        <tr>
+                            <th>From</th>
+                            <th>Notification</th>
+                            <th>Date</th>
+                            <th>Actions</th>
+                        </tr>
+                       </thead>
+                       <tbody>
+                        <tr>
+                            <td>
+                                <div class="d-inline-block align-middle">
+                                    <div class="d-inline-block">
+                                        <h6>Shirley  Hoe</h6>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Pinterest</td>
+                            <td>19-11-2018</td>
+                            <td>
+                                <button type="button" id="demo" class="btn btn-outline-primary btn-rounded">Accept</button>
+                                <button type="button" id="demo" class="btn btn-outline-primary btn-rounded">refuse</button>
+
+                                <!--<a href="#!"><i class="ik ik-edit f-16 mr-15 text-green"></i></a><a href="#!"><i class="ik ik-trash-2 f-16 text-red"></i></a>-->
+                            </td>
+                        </tr>
+                        
+                       
+                       </tbody>
+                    </table>
+                  </div>
+                  </div>
+             </div>
+            </div>
+        </div>
+    <!-- table panel  end -->
+
+        <div class="tab-pane fade" id="group-tab">
+   <div class="row">
+        <div class="col-md-6">
+          <div class="card table-card">
+             <div class="card-block">
+            <div class="table-responsive">
+                <table class="table table-hover mb-0">
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>Name</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% if group_list %}
+                        {% for group in info.group_list %}
+                        <tr>
+                            <td>
+                               {{ info.group_list }}
+                            </td>
+                            <td>
+                                {{ group.name}}
+                            </td>
+                            <td>
+                                <span>Members</span>
+                                <button class="btn btn-primary"  data-toggle="modal" data-target="#memberModel" ><i class="fa fa-address-card"></i> </button>
+                                <button class="btn btn-primary"><i class="fa fa-user-plus"></i> </button>
+                                <button class="btn btn-primary"><i class="fa fa-user-times"></i> </button>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                        {% endif %}
+                       
+                    </tbody>
+                </table>
+            </div>
+             </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+                <div class="card table-card">
+                   <div class="card-block">
+                      <div class="table-responsive">
+                      <table class="table table-hover mb-0">
+                          <thead>
+                              <tr>
+                                  <th>userId</th>
+                                  <th>UserName</th>
+                                  <th></th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>
+                                      1026588   
+                                  </td>
+                                  <td>
+                                        liming
+                                  </td>
+                                  <td>
+                                      <button class="btn btn-primary"><i class="fa fa-user-times"></i> </button>
+                                  </td>
+                              </tr>     
+                          </tbody>
+                      </table>
+                      </div>
+                      <div>
+                            <button type="button" id="new_member" class="btn btn-outline-primary btn-rounded" data-toggle="modal" data-target="#newMemberModal"> Add New Member</button>
+                      </div>
+                   </div>
+                </div>
+         </div>
+    </div>  
+      <div>
+        <button type="button" id="demo" class="btn btn-outline-primary btn-rounded" data-toggle="modal" data-target="#myModal">New Group</button>
+      </div>
+    
+
+<!-- Customer overview end -->
+        </div>
+       
+        </div>
+    </div>
+
+
+ 
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        </div>
+        <div class="modal-body">
+                  <form id="updateform" action="test.php" >
+                      <div class="form-group">
+                          <label for="loginname" class="control-label">用户名:</label>
+                          <input type="text" class="form-control" id="loginname" name="loginname">
+                      </div>
+                      
+                      <div class="text-right">
+                          <span id="returnMessage" class="glyphicon"> </span>
+                          <button type="button" class="btn btn-default right" data-dismiss="modal">Close</button>
+                          <button id="submitBtn" type="button" class="btn btn-primary" οnclick="add_info()" >Add</button>
+                      </div>
+                  </form>
+        </div>
+      </div>
+    </div>
+</div>
+   
+
+<div class="modal fade" id="newMemberModal" tabindex="-1" role="dialog" aria-labelledby="newMemberModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h4 class="modal-title" id="newMemberModalLabel">Member list</h4>
+            </div>
+            <div class="modal-body">
+                      <form id="updateform" action="" >
+                          <div class="form-group">
+                              <label for="loginname" class="control-label">user list:</label>
+                              <input type="text" class="form-control" id="loginname" name="loginname">
+                          </div>
+                          
+                          <div class="text-right">
+                              <span id="returnMessage" class="glyphicon"> </span>
+                              <button type="button" class="btn btn-default right" data-dismiss="modal">Close</button>
+                              <button id="submitBtn" type="button" class="btn btn-primary" οnclick="add_info()" >Add</button>
+                          </div>
+                      </form>
+            </div>
+          </div>
+        </div>
+    </div>
+  
+</body>
+</html>
