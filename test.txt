@@ -16,59 +16,9 @@ def ajax_get(request):
     data['age'] = '17'
     return JsonResponse(data)
 # 主页
-info = {}
-        user_info={}
-        user_info['name']='liming'
-        user_info['first_name']='lee'
-        user_info['last_name'] ='zhang'
-        user_info['email'] ='dowow@gmail.com'
-        user_info['data_joined']='1922-3-01'
-        
-        template = loader.get_template('profile_new.html')
-        
-       
-       
-       <!--  table panel notification start -->
-        <div class="tab-pane fade in active" id="profile-tab">
-            <p> profile</p>
-            <div class="col-md-8">
-                <div class="card table-card">
-                   <div class="card-header">
-                        <h6>   </h6> 
-                   </div>
-                    <div class="card-block">
-                    <div class="table-responsive">
-                        <table class="table table-hover mb-0">
-                          <thead>
-                           <tr>
-                               <th> </th>
-                               <th> </th>
+Client ID
+987fa25c298147bf8d42
+Client Secret
+b72bf28d459e1f61b1b7f61a4db4195327be0a5c
 
-                           </tr>
-                          </thead>
-                          <tbody>
-                              {% if userinfo %}
-                           <tr>                         
-                               <td>username</td> <td>{{userinfo.name}}</td>
-                           </tr>
-                           <tr>                         
-                            <td>first_name</td> <td>{{userinfo.first_name}}</td>
-                           </tr>
-                           <tr>                         
-                            <td>last_name</td> <td>{{userinfo.last_name}}</td>
-                            </tr>
-                            <tr>                         
-                                <td>email</td> <td>{{userinfo.email}}</td>
-                            </tr>
-                            <tr>                         
-                                <td>join_date</td> <td>{{userinfo.join_date}}</td>
-                            </tr>
-                            {% endif %}
-                          </tbody>
-                       </table>
-                     </div>
-                     </div>
-                </div>
-               </div>
-           </div>
-         </div>
+IQSS/dataverse-client-python
