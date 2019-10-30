@@ -41,3 +41,27 @@ Client Secret
 b72bf28d459e1f61b1b7f61a4db4195327be0a5c
 
 IQSS/dataverse-client-python
+
+<select class="form-control" onchange="ShowImage(parseInt(this.value), 'media');">
+    <option selected="selected" value="1">内容1</option>
+    <option value="2">内容2</option>
+    <option value="3">内容3/option>
+</select>
+
+<div class="row" style="display: block;" id="media1"></div>
+<div class="row" style="display: none;" id="media2"></div>
+<div class="row" style="display: none;" id="media3"></div>
+
+<script>
+function ShowImage(page, tag){
+    var i = 1;
+    var el;
+    while (el = document.getElementById(tag + i)) {
+        if (i == page)
+        el.style.display = 'block';
+        else
+        el.style.display = 'none';
+        i++;
+    }
+}
+</script>
