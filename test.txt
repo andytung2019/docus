@@ -7,15 +7,8 @@ http://yshblog.com/blog/174
 https://www.jianshu.com/p/f4d7827821f1
 https://github.com/pinax/pinax-notifications
 
-def ajax_get(request):
-    # 获取前端输入的内容
-    name = request.GET.get('name')
-    print(name)
-    data = {}
-    data['name'] = 'hello'
-    data['age'] = '17'
-    return JsonResponse(data)
-# 主页
+
+
 Client ID
 987fa25c298147bf8d42
 Client Secret
