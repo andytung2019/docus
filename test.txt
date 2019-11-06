@@ -71,3 +71,43 @@ def jaccard_similarity(list1, list2):
     intersection = len(list(set(list1).intersection(list2)))
     union = (len(list1) + len(list2)) - intersection
     return float(intersection) / union
+
+
+@csrf_exempt
+def test_submit(request):
+    print(request.POST)
+   
+    data2 = json.loads(request.POST.get('data', ''))
+    print(data2)
+    for x in data2:
+        print(x['name'])
+
+    response_data = {}
+    response_data['result'] = 's'
+    response_data['message'] = 'hello'
+    return JsonResponse(response_data)
+ 
+ <script>
+    function AjaxSubmit_set() {
+        var data_list = [
+            {'name':'james','age':34},
+            {'name':'durant','age':31},
+            {'name':'curry','age':30},
+        ];
+        
+        $.ajax({
+            url:'/test_submit/',
+            type:'POST',
+            tradition:true,
+            data:{data:JSON.stringify(data_list)},
+            success: function (data) {
+                alert(data.message);
+
+            }
+        })
+    }
+</script>
+   
+   <div>
+        <button type="button" id="test-submit" onclick="AjaxSubmit_set()" class="btn btn-outline-primary btn-rounded">test</button>
+      </div>
