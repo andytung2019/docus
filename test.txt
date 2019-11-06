@@ -71,7 +71,13 @@ def jaccard_similarity(list1, list2):
     intersection = len(list(set(list1).intersection(list2)))
     union = (len(list1) + len(list2)) - intersection
     return float(intersection) / union
-
+def jaccard_sim(a, b):
+    unions = len(set(a).union(set(b)))
+    intersections = len(set(a).intersection(set(b)))
+    return 1. * intersections / union
+a = ['x', 'y']
+b = ['x', 'z', 'v']
+print(jaccard_sim(a, b))
 
 @csrf_exempt
 def test_submit(request):
