@@ -117,3 +117,75 @@ def test_submit(request):
    <div>
         <button type="button" id="test-submit" onclick="AjaxSubmit_set()" class="btn btn-outline-primary btn-rounded">test</button>
       </div>
+
+
+
+
+
+<table class="table table-striped" id="pstable">
+ <thead>
+ <tr>
+  <th>user</th>
+  <th>pid</th>
+  <th>cmd</th>
+ </tr>
+ </thead>
+ <tbody>
+ {% for ps in info.ps_data %}
+ <tr>
+  {% for item in ps %}
+  <td>{{ item }}</td>
+  {% endfor %}
+ </tr>
+ {% endfor %}
+ </tbody>
+ </table>
+ 
+ 
+ 2. <script type="text/javascript"> 
+$(document).ready(function(){ 
+ $("#gobtn").click(function(){ 
+ var ip=$("#ip").val(); //获取输入框中的ip 
+ $.post("/process/",{'hostip':ip}, //post函数到后端 
+ function(data,status){ //回调函数 
+ $("#pstable").html(data); //将id为pstable的标签的html替换为返回的data 
+ $("#ip").val(ip) //将输入框的值改为查询的ip 
+ }); 
+}); 
+});
+
+def process_view(request): 
+ hostip = request.POST.get('hostip') 
+ logger.debug("host:%s" % hostip) 
+ if hostip is None: 
+ ps_data = GetHostPs('192.168.163.128') 
+ info = {'username':request.user,'ps_data':ps_data} 
+ template = 'process.html' 
+ #return render(request,'process.html',{"info":info}) 
+ elif hostip: 
+ ps_data = GetHostPs(hostip) 
+ info = {'username':request.user,'ps_data':ps_data} 
+ template = 'pstable.html' 
+ #return render(request,'pstable.html',{"info":info}) 
+ else: 
+ ps_data = GetHostPs('192.168.163.128') 
+ info = {'username':request.user,'ps_data':ps_data} 
+ template = 'pstable.html' 
+ return render(request,template,{"info":info})
+ 
+ <thead> 
+ <tr> 
+  <th>user</th> 
+  <th>pid</th> 
+  <th>cmd</th> 
+ </tr> 
+ </thead> 
+ <tbody> 
+ {% for ps in info.ps_data %} 
+ <tr> 
+  {% for item in ps %} 
+  <td>{{ item }}</td> 
+  {% endfor %} 
+ </tr> 
+ {% endfor %} 
+ <tbody>
