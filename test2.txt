@@ -1,0 +1,22 @@
+from pyDataverse.api import Api
+from pyDataverse.models import Dataverse
+base_url = 'https://dataverse.harvard.edu/'
+api = Api(base_url)
+api.status
+dv = 'andytung'
+resp = api.get_dataverse(dv)
+resp.json()['data']['creationDate']
+
+
+data=api.get_datafiles(doi,'1')
+for nod in data.json()['data']:
+	print(nod['dataFile']['persistentId'])
+
+doi:10.7910/DVN/XW8JYK/QDJ7KH
+doi:10.7910/DVN/XW8JYK/JRXJLM
+doi:10.7910/DVN/XW8JYK/5XRMBU
+doi:10.7910/DVN/XW8JYK/UY9GPH
+
+download URL:
+https://dataverse.harvard.edu/api/access/datafile/:persistentId?persistentId=doi:10.7910/DVN/XW8JYK/JRXJLM
+
