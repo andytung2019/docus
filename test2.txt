@@ -20,3 +20,6 @@ doi:10.7910/DVN/XW8JYK/UY9GPH
 download URL:
 https://dataverse.harvard.edu/api/access/datafile/:persistentId?persistentId=doi:10.7910/DVN/XW8JYK/JRXJLM
 
+upload files in django
+https://www.cnblogs.com/zhangxinqi/p/10785351.html
+
