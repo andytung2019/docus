@@ -1,3 +1,21 @@
+pip install git+https://github.com/vaclavcadek/keras2pmml
+https://codereview.stackexchange.com/questions/10960/xml-schema-parser
+
+>> import xmlschema
+>>> from pprint import pprint
+>>> schema = xmlschema.XMLSchema('xmlschema/tests/test_cases/examples/vehicles/vehicles.xsd')
+>>> schema.types
+NamespaceView({'vehicleType': XsdComplexType(name='vehicleType')})
+>>> pprint(dict(schema.elements))
+{'bikes': XsdElement(name='vh:bikes', occurs=[1, 1]),
+ 'cars': XsdElement(name='vh:cars', occurs=[1, 1]),
+ 'vehicles': XsdElement(name='vh:vehicles', occurs=[1, 1])}
+>>> schema.attributes
+NamespaceView({'step': XsdAttribute(name='vh:step')})
+
+
+
+
 from pyDataverse.api import Api
 from pyDataverse.models import Dataverse
 base_url = 'https://dataverse.harvard.edu/'
